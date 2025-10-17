@@ -84,12 +84,6 @@ public final class Constants {
         public static final double drivePower = 1;
         public static final double anglePower = .9;
 
-
-        /* Drive Motor Characterization Values from SysID */
-        public static final double driveKS = (0); //TODO: This must be tuned to specific robot
-        public static final double driveKV = (0);
-        public static final double driveKA = (0);
-
         /* Swerve Profiling Values */
         /** Meters per Second */
         public static final double maxSpeed = 4.5; //TODO: This must be tuned to specific robot
