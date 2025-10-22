@@ -24,7 +24,7 @@ public class IntakeSubsystem extends SubsystemBase {
 
   private Spark frontIntakeMotor;
   private Spark backIntakeMotor;
-  private SparkMax upperIntakeMotor;
+  private SparkMax lowerIntakeMotor;
 
   private DoubleSolenoid frontLeftSolenoid;
   private DoubleSolenoid frontRightSolenoid;
@@ -37,7 +37,7 @@ public class IntakeSubsystem extends SubsystemBase {
   public IntakeSubsystem() {
     frontIntakeMotor = new Spark(0);
     backIntakeMotor = new Spark(1);
-    upperIntakeMotor = new SparkMax(8, MotorType.kBrushless);
+    lowerIntakeMotor = new SparkMax(9, MotorType.kBrushless);
 
     frontLeftSolenoid = new DoubleSolenoid(PneumaticsModuleType.REVPH, 0, 1);
     frontRightSolenoid = new DoubleSolenoid(PneumaticsModuleType.REVPH, 2, 3);
@@ -81,6 +81,14 @@ public class IntakeSubsystem extends SubsystemBase {
 
   public void runBackIntake(double speed) {
     backIntakeMotor.set(speed);
+  }
+
+  public void runLowerIntake(double speed) {
+    lowerIntakeMotor.set(speed);
+  }
+
+  public void setServoPosition(double position) {
+    centerServo.set(position);
   }
 
   public boolean getCenterBB() {
