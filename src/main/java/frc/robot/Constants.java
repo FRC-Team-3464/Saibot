@@ -135,5 +135,15 @@ public final class Constants {
         }
     }
 
+    public static final class ShooterConstants {
+        public static final double flywheelKP = 0;
+        public static final double flywheelKI = 0;
+        public static final double flywheelKD = 0;
+        public static final double flywheelKS = 0;
+        public static final double flywheelKV = 0;
+
+
+    }
+
 
 }
